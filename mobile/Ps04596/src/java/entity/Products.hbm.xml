@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="entity.Products" table="Products" schema="dbo" catalog="Mobileweb" optimistic-lock="version">
+        <id name="code" type="string">
+            <column name="Code" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" />
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="Price" precision="53" scale="0" />
+        </property>
+        <property name="images" type="string">
+            <column name="Images" length="200" />
+        </property>
+        <property name="detail" type="string">
+            <column name="Detail" />
+        </property>
+    </class>
+</hibernate-mapping>
